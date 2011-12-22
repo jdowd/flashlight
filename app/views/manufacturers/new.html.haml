@@ -1,0 +1,8 @@
+= link_to "Manufacturer List", manufacturers_path
+%h1 Add a new manufacturer
+
+= form_for @manufacturer do |m|
+  = m.label :name
+  = m.text_field :name
+  = m.submit
+

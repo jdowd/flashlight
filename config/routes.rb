@@ -1,4 +1,18 @@
 Flashlight::Application.routes.draw do
+  get "products/new"
+
+  get "products/index"
+
+  get "products/edit"
+
+  # get "manufacturers/index"
+  # 
+  # get "manufacturers/new"
+  # 
+  # get "manufacturers/edit"
+
+  resources :manufacturers
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
