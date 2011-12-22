@@ -7,6 +7,7 @@ gem 'rails', '3.1.3'
 
 gem 'sqlite3'
 gem 'haml-rails'
+# does this line exist in branch master?
 
 # Gems used only for assets and not required
 # in production environments by default.
