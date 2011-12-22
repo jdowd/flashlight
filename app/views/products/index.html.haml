@@ -1,2 +1,13 @@
-%h1 Products#index
-%p Find me in app/views/products/index.html.haml
+= link_to "Add Product", new_product_path
+
+%h1 Products
+
+%table
+  %tr
+    %th Model
+    %th Manufacturer
+  - @products.each do |p|
+    %tr
+      %td= p.model
+      %td= p.manufacturer ? p.manufacturer.name : "??"
+      / %td= p.manufacturer.name if p.manufacturer

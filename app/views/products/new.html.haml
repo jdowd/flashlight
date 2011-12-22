@@ -1,2 +1,17 @@
-%h1 Products#new
-%p Find me in app/views/products/new.html.haml
+= link_to "Products list", products_path
+
+%h1 Products
+
+
+= form_for @product do |f|
+  = f.label :model
+  = f.text_field :model
+  %br
+  %br
+  = f.label :manufacturer_id
+  = f.collection_select :manufacturer_id, Manufacturer.all, :id, :name, :prompt => true
+  %br
+  %br
+  = f.submit 
+  
+  
