@@ -1,2 +1,8 @@
-%h1 Manufacturers#edit
-%p Find me in app/views/manufacturers/edit.html.haml
+%h1= "Edit #{@manufacturer.name}"
+
+
+= form_for @manufacturer do |m|
+  = m.label :name
+  = m.text_field :name
+  = m.submit
+

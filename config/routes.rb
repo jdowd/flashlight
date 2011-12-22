@@ -1,15 +1,9 @@
 Flashlight::Application.routes.draw do
 
-
-  get "categories/index"
-
-  get "categories/new"
-
-  get "categories/edit"
-
   get "welcome/home"
 
   resources :manufacturers
+  resources :categories
   resources :products
   resources :testers
 

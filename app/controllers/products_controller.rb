@@ -14,6 +14,14 @@ class ProductsController < ApplicationController
   end
 
   def edit
+    @product = Product.find(params['id'])
+  end
+  
+  def update
+    # raise 'b'
+    @product = Product.find(params['id'])
+    @product.update_attributes(params['product'])
+    redirect_to :action => 'index'
   end
 
 end

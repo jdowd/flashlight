@@ -1,6 +1,6 @@
 = link_to "New Manufacturer", new_manufacturer_path
 %h1 Manufacturers
 
-- @manufacturers.each do |manufacturer|
-  = manufacturer.name
+- @manufacturers.each do |m|
+  = link_to m.name, edit_manufacturer_path(m)
   %br

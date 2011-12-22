@@ -1,2 +1,7 @@
-%h1 Testers#edit
-%p Find me in app/views/testers/edit.html.haml
+%h1= "Edit #{@tester.name}" 
+
+= form_for @tester do |f|
+  = f.label :name
+  = f.text_field :name
+  = f.submit
+  

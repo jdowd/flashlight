@@ -1,2 +1,16 @@
-%h1 Products#edit
-%p Find me in app/views/products/edit.html.haml
+%h1= "Edit #{@product.model}"
+
+= form_for @product do |f|
+  = f.label :model
+  = f.text_field :model
+  %br
+  %br
+  = f.label :manufacturer_id
+  = f.collection_select :manufacturer_id, Manufacturer.all, :id, :name, :prompt => true
+  %br
+  %br
+  = f.submit 
+  
+  
+
+  

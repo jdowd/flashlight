@@ -8,6 +8,6 @@
     %th Manufacturer
   - @products.each do |p|
     %tr
-      %td= p.model
+      %td= link_to p.model, edit_product_path(p)
       %td= p.manufacturer ? p.manufacturer.name : "??"
       / %td= p.manufacturer.name if p.manufacturer

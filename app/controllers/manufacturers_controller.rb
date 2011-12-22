@@ -14,6 +14,14 @@ class ManufacturersController < ApplicationController
   end
 
   def edit
+    @manufacturer = Manufacturer.find(params['id'])
+  end
+  
+  def update
+    # raise 'b'
+    @manufacturer = Manufacturer.find(params['id'])
+    @manufacturer.update_attributes(params['manufacturer'])
+    redirect_to :action => 'index'
   end
 
 end

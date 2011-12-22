@@ -14,6 +14,14 @@ class TestersController < ApplicationController
   end
 
   def edit
+    @tester = Tester.find(params['id'])
+  end
+  
+  def update
+    # raise 'b'
+    @tester = Tester.find(params['id'])
+    @tester.update_attributes(params['tester'])
+    redirect_to :action => 'index'
   end
 
 end

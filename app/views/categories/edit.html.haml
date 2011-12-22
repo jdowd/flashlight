@@ -1,2 +1,7 @@
-%h1 Categories#edit
-%p Find me in app/views/categories/edit.html.haml
+%h1= "Edit #{@category.category}"
+
+= form_for @category do |f|
+  = f.label :category
+  = f.text_field :category
+  = f.submit
+  
