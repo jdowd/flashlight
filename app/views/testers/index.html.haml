@@ -1,0 +1,6 @@
+= link_to "Add Tester", new_tester_path
+%h1 Testers
+
+- @testers.each do |tester|
+  = tester.name
+  %br

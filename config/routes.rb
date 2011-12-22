@@ -1,9 +1,17 @@
 Flashlight::Application.routes.draw do
 
+
+  get "categories/index"
+
+  get "categories/new"
+
+  get "categories/edit"
+
   get "welcome/home"
 
   resources :manufacturers
   resources :products
+  resources :testers
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

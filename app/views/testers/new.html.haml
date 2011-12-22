@@ -1,0 +1,8 @@
+= link_to "Testers List", testers_path
+%h1 Testers
+
+= form_for @tester do |f|
+  = f.label :name
+  = f.text_field :name
+  = f.submit
+  
